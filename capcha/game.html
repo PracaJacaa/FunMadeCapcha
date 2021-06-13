@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Zadanie2</title>
+    <style>
+        table, th, td {
+          border: 9px solid rgb(250, 0, 0);
+        }
+        </style>
+</head>
+    <body bgcolor="black" text="white">
+        <center>
+        <div>
+        <h1>Kliknij w gucia.exe</gra></h1>
+        <table>
+            <tr>
+                <td><img src="Gucio.png" id="1" width="250px" length="250px" onclick="fukaj(1)"></td>
+                <td><img src="Gucio.png" id="2" width="250px" length="250px" onclick="fukaj(2)"></td>
+                <td><img src="Maja.jpg" id="3" width="250px" length="250px" onclick="jakuf(3)"></td>
+            </tr>
+            <tr>
+                <td><img src="lody.png" id="4" width="250px" length="250px" onclick="jakuf(4)"></td>
+                <td><img src="Gucio.png" id="5" width="250px" length="250px" onclick="fukaj(5)"></td>
+                <td><img src="cukierki.jpg" id="6" width="250px" length="250px" onclick="jakuf(6)"></td>
+            </tr>
+            <tr>
+                <td><img src="Maja.jpg" id="7" width="250px" length="250px" onclick="jakuf(7)"></td>
+                <td><img src="cukierki.jpg" id="8" width="250px" length="250px" onclick="jakuf(8)"></td>
+                <td><img src="Gucio.png" id="9" width="250px" length="250px" onclick="fukaj(9)"></td>
+            </tr>
+        </table>
+        <a id="punkty">Punkty 0 </a>
+    </div>
+</center>
+<script>
+    var punkty = document.getElementById("punkty"),
+    count = 0;
+    function fukaj(x){
+        document.getElementById(x).src = "accept.png"
+        count += 1;
+    punkty.innerHTML = "Punkty " + count;
+};
+    function jakuf(x){
+        document.getElementById(x).src = "x.jpg"
+        count -= 1;
+        punkty.innerHTML = "Punkty " + count;
+    }
+</script>
+        </body>
+</html>
